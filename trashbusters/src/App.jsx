@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
-import NavigationBar from './components/Navbar'
-import Main from './components/Main'
+import NavigationBar from './components/Navbar.jsx'
+import Main from './components/Main.jsx'
 
 function App() {
 
