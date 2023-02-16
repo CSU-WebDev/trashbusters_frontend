@@ -5,6 +5,10 @@
   text-align: center;
 } */
 
+body, html, #root, .App{
+  height: 100%;
+}
+
 :root {
   --dark-mode-gray: rgb(64, 64 ,64);
   --light-mode-offwhite: #56585a4d;
@@ -40,5 +44,33 @@
 
 #brand {
   pointer-events: none;
+}
+
+.wrapper{
+  background-color: rgb(17, 80, 17);
+  height: 100%;
+}
+
+.box{
+  background-color: burlywood;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.center {
+  display: flex;
+  width: 100%;
+  max-width: 60%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.height100{
+  height: 100%;
+}
+
+.row-space{
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
