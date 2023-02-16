@@ -9,9 +9,10 @@ export default function Pics() {
     return (
         <>
             <Container>
+            <Container fluid class="center" >
                 <Row>
-                    <Col><PrettyPic /></Col>
-                    <Col><UglyPic /></Col>
+                    <Col class="text-center"><PrettyPic /></Col>
+                    <Col class="text-center"><UglyPic /></Col>
                 </Row>
             </Container>
         </>
