@@ -14,7 +14,7 @@ const CSU = {
 
 function TrashMap() {
   const [marker, setMarker] = useState(null);
-  const [description, setDescription] = useState('');
+  const [desc, setDescription] = useState('');
 
   const handleMapClick = (event) => {
     const lat = event.latLng.lat();
@@ -27,20 +27,21 @@ function TrashMap() {
   };
 
   const handleSavePointClick = () => {
-    if (marker && description) {
+    if (marker && desc) {
       // axios.post('YOUR_API_ENDPOINT_URL', {
-      //   latitude: marker.lat,
-      //   longitude: marker.lng,
-      //   description: description
-      // })
-      // .then((response) => {
-      //   console.log(response);
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      // });
+      axios.post('http://localhost:3000/api/addPin', {
+        lat: marker.lat,
+        lon: marker.lng,
+        desc: desc
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
       console.log(marker)
-      console.log(description)
+      console.log(desc)
     }
   };
 
@@ -62,7 +63,7 @@ function TrashMap() {
                 <h3>Latitude: {marker.lat.toFixed(6)}</h3>
                 <h3>Longitude: {marker.lng.toFixed(6)}</h3>
                 <label>Description:</label>
-                <input type="text" value={description} onChange={handleDescriptionChange} placeholder="Enter description" />
+                <input type="text" value={desc} onChange={handleDescriptionChange} placeholder="Enter description" />
                 <button onClick={handleSavePointClick}>Save Point</button>
               </div>
             </InfoWindow>
