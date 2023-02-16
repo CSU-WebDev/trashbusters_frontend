@@ -7,13 +7,15 @@ import Col from 'react-bootstrap/Col';
 export default function Pitch() {
     return (
         <>
-            <Container>
+            <Container fluid class="center" className="mt-2 mb-2">
+                <div class="box">
                 <Row>
-                    <Col>Which do you prefer?</Col>
+                    <Col><h3 class="text-center"> Which do you prefer? </h3></Col>
                 </Row>
                 <Row>
-                    <Col><Pics /></Col>
+                    <Col ><div class="text-center"><Pics /></div></Col>
                 </Row>
+                </div>
             </Container>
         </>
     )
