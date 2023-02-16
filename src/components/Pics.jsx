@@ -8,7 +8,6 @@ import Col from 'react-bootstrap/Col';
 export default function Pics() {
     return (
         <>
-            <Container>
             <Container fluid class="center" >
                 <Row>
                     <Col class="text-center"><PrettyPic /></Col>
