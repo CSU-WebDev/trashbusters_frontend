@@ -1,9 +1,8 @@
 import React from 'react'
 import Pitch from './Pitch'
 import About from './About'
-import TrashMap from './TrashMap'
+import TrashMapContainer from './TrashMapContainer'
 import Contact from './Contact'
-import Footer from './Footer'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -15,11 +14,10 @@ export default function Main() {
                 <Row>
                     <Col sm={1}></Col>
                     <Col>
-            <Pitch />
-            <About />
-            <TrashMap />
-            <Contact />
-            <Footer />
+                        <Pitch />
+                        <About />
+                        <TrashMapContainer />
+                        <Contact />
                     </Col>
                     <Col sm={1}></Col>
                 </Row>
