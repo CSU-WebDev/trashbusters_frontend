@@ -79,3 +79,9 @@ body, html, #root, .App{
 #footer {
   background-color: gray;
 }
+
+.center-component{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
