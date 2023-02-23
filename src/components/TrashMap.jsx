@@ -5,9 +5,6 @@ import axios from 'axios';
 const containerStyle = {
   width: '400px',
   height: '400px',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center'
 };
 
 const CSU = {
