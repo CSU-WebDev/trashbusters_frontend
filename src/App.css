@@ -9,15 +9,16 @@ body, html, #root, .App{
   height: 100%;
 }
 
-:root {
+/*:root {
   --dark-mode-gray: rgb(64, 64 ,64);
   --light-mode-offwhite: #56585a4d;
   --background-offwhite: rgb(240, 230, 230);
-}
+}*/
 
 #navigation-bar {
   color: white;
-  background-color: gray;
+  background-color: #658E9C;
+  font-family: "Lucida Bright", Georgia, serif;
 }
 
 .navbar-brand {
@@ -38,7 +39,7 @@ body, html, #root, .App{
 
 .navbar-link:hover, .navbar-link.active {
   color: white !important;
-  text-shadow: 0 0 10px gray, 0 0 20px gray, 0 0 30px gray;
+  text-shadow: 0 0 10px gray, 0 0 20px rgb(87, 87, 87), 0 0 30px rgb(34, 34, 34);
   transform: scale(1.1);
 }
 
@@ -47,16 +48,17 @@ body, html, #root, .App{
 }
 
 .wrapper{
-  background-color: rgb(17, 80, 17);
-  /* height: 100%;
-  min-height: 100vh;
-  overflow: auto; */
+  background-color: #004D21;
+  grid-gap: 50px;
 }
 
 .box{
-  background-color: burlywood;
+  background-color: rgb(136, 123, 10);
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 25px;
+  font-family: "Lucida Bright", Georgia, serif;
+  color: white !important;
+  /*box-shadow: 1px 1px 10px 10px rgb(59, 59, 24);*/
 }
 
 .center {
@@ -77,5 +79,12 @@ body, html, #root, .App{
 }
 
 #footer {
-  background-color: gray;
+  background-color: #658E9C;
+  font-family: "Lucida Bright", Georgia, serif;
+}
+
+.center-component{
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }

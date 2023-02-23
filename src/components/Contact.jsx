@@ -9,10 +9,11 @@ export default function Contact() {
         <Container fluid class="center" className="mt-2 mb-2">
             <div class="box">
                 <Row>
-                    <Col><h3 class="text-center" id="contact">Contact</h3></Col>
+                    <Col><h3 class="text-center" id="contact">Contact Us</h3></Col>
                     </Row>
                     <Row>
-                    <Col><p>I'm ed we here at ed like our ed that is ed I'm ed we here at ed like our ed that is ed I'm ed we here at ed like our ed that is edI'm ed we here at ed like our ed that is ed I'm ed we here at ed like our ed that is ed</p></Col>
+                    <Col><p>For any questions or concerns you may have you may contact us here at:</p><p>Email: trashbusters@realemail.com</p>
+                    <p>Phone: 101-001-1010</p><p>Or post a message to our github at: 'insert public release here'</p></Col>
                 </Row>
             </div>
             </Container>

@@ -12,7 +12,7 @@ export default function Footer() {
         <Row>
           <Col className="text-center">
             <p className='mb-1'>Copyright &copy; {currentYear}</p>
-            <p>Footer</p>
+            <p>Trashbusters is not affiliated with any organization. This program was made for a college project.</p>
           </Col>
         </Row>
       </Container>
