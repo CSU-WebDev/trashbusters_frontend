@@ -49,7 +49,6 @@ body, html, #root, .App{
 
 .wrapper{
   background-color: #004D21;
-  grid-gap: 50px;
 }
 
 .box{
@@ -58,7 +57,7 @@ body, html, #root, .App{
   border-radius: 25px;
   font-family: "Lucida Bright", Georgia, serif;
   color: white !important;
-  /*box-shadow: 1px 1px 10px 10px rgb(59, 59, 24);*/
+  box-shadow: 1px 1px 10px 10px rgba(5, 5, 5, 0.466);
 }
 
 .center {
@@ -89,7 +88,6 @@ body, html, #root, .App{
   display: flex;
 }
 
-/*
-#about-container {
-  padding-bottom: 50px;
-}*/
+#grid-container {
+  padding-bottom: 15px;
+}
