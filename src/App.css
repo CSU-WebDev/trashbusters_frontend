@@ -88,3 +88,8 @@ body, html, #root, .App{
   justify-content: center;
   display: flex;
 }
+
+/*
+#about-container {
+  padding-bottom: 50px;
+}*/
