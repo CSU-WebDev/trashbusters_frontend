@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 export default function Pics() {
     return (
         <>
-            <Container fluid class="center" >
+            <Container id='grid-container' fluid class="center" >
                 <Row>
                     <Col class="text-center"><PrettyPic /></Col>
                     <Col class="text-center"><UglyPic /></Col>
