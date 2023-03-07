@@ -22,13 +22,13 @@ body, html, #root, .App{
 }
 
 .navbar-brand {
-  margin-left: 50px !important;
+  margin-left: 50px;
   font-size: xx-large;
-  color: white;
+  color: white !important;
 }
 
 .navbar-links {
-  margin-right: 200px !important;
+  margin-right: 200px;
   font-size: xx-large;
 }
 
@@ -56,7 +56,7 @@ body, html, #root, .App{
   padding: 15px;
   border-radius: 25px;
   font-family: "Lucida Bright", Georgia, serif;
-  color: white !important;
+  color: white;
   box-shadow: 1px 1px 10px 10px rgba(5, 5, 5, 0.466);
 }
 
@@ -80,6 +80,8 @@ body, html, #root, .App{
 #footer {
   background-color: #658E9C;
   font-family: "Lucida Bright", Georgia, serif;
+  color: white;
+  padding-top: 10px;
 }
 
 .center-component{

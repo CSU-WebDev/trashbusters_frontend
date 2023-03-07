@@ -20,7 +20,7 @@ const NavigationBar = (props) => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="justify-content-end navbar-links" style={{ width: "100%" }}>
             <Nav.Link className='navbar-link' href="#about">About</Nav.Link>
-            <Nav.Link className='navbar-link' href="#trashmap">Trash-Map</Nav.Link>
+            <Nav.Link className='navbar-link' href="#trashmapcontainer">Trash-Map</Nav.Link>
             <Nav.Link className='navbar-link' href="#contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
