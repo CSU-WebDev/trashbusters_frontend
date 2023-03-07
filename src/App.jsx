@@ -6,9 +6,8 @@ import Footer from './components/Footer.jsx'
 import axios from 'axios'
 
 function App() {
-  axios.get('https://se4r56t7yg.onrender.com/api/getAll')
+  axios.get('https://trashbusters-backend.onrender.com')
   .then(function (response) {
-    // handle success
     console.log(response.data);
   })
   return (

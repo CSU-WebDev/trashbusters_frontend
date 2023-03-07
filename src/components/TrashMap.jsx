@@ -31,7 +31,8 @@ function TrashMap() {
 
   const handleSavePointClick = () => {
     if (marker && desc) {
-      axios.post('http://localhost:3000/api/addPin', {
+      // axios.post('http://localhost:3000/api/addPin', {
+      axios.post('https://trashbusters-backend.onrender.com/api/addPin', {
         lat: marker.lat,
         lng: marker.lng,
         desc: desc
@@ -57,7 +58,8 @@ function TrashMap() {
 
   const handleDeleteClick = (_id) => {
     console.log(`posting id: ${_id}`)
-    axios.delete(`http://localhost:3000/api/deletePin/${_id}`)
+    // axios.delete(`http://localhost:3000/api/deletePin/${_id}`)
+    axios.delete(`https://trashbusters-backend.onrender.com/api/deletePin/${_id}`)
       .then(() => {
         console.log(pins)
         setPins(pins.filter(pin => pin._id !== _id));
@@ -70,7 +72,8 @@ function TrashMap() {
   }
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/getPins')
+    // axios.get('http://localhost:3000/api/getPins')
+    axios.get('https://trashbusters-backend.onrender.com/api/getPins')
       .then((response) => {
         // console.log('Current pins state:', pins); // log current state
         // console.log('API response data:', response.data);
