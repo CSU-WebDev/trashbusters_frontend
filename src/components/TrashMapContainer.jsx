@@ -10,7 +10,7 @@ export default function TrashMapContainer() {
             <Container id='grid-container' fluid class="center" className="mt-2 mb-2">
                 <div class="box">
                 <Row>
-                    <Col><h3 class="text-center"> Trash Map </h3></Col>
+                    <Col><h3 id='trashmapcontainer' class="text-center"> Trash Map </h3></Col>
                 </Row>
                 <Row>
                     <Col ><div class="text-center center-component"><TrashMap /></div></Col>
