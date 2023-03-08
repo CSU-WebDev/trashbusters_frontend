@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "cross-env PORT=4000 react-scripts start",
+    "render-start": "cross-env react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
