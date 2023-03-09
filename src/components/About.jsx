@@ -6,10 +6,10 @@ import Col from 'react-bootstrap/Col';
 export default function About() {
     return (
         <>
-        <Container id='grid-container' fluid class="center" className="mt-2 mb-2">
-        <div class="box">
+        <Container id='grid-container' fluid className="center mt-2 mb-2">
+        <div className="box">
                 <Row>
-                    <Col><h3 class="text-center" id="about">About</h3></Col>
+                    <Col><h3 className="text-center" id="about">About</h3></Col>
                     </Row>
                     <Row>
                     <Col><p>Below is our handy dandy trash map! You can use it to mark areas on the map where you have spotted litter. 

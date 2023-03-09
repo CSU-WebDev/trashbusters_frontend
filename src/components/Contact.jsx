@@ -6,10 +6,10 @@ import Col from 'react-bootstrap/Col';
 export default function Contact() {
     return (
         <>
-        <Container id='grid-container' fluid class="center" className="mt-2 mb-2">
-            <div class="box">
+        <Container id='grid-container' fluid className="center mt-2 mb-2">
+            <div className="box">
                 <Row>
-                    <Col><h3 class="text-center" id="contact">Contact Us</h3></Col>
+                    <Col><h3 className="text-center" id="contact">Contact Us</h3></Col>
                     </Row>
                     <Row>
                     <Col><p>For any questions or concerns you may have you may contact us here at:</p><p>Email: trashbusters@realemail.com</p>

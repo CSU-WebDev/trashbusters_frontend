@@ -4,6 +4,6 @@ import Image from 'react-bootstrap/Image'
 
 export default function UglyPic() {
     return (
-        <Image class="text-center" src={UglyPicture} fluid />
+        <Image className="text-center" src={UglyPicture} fluid />
     )
 }

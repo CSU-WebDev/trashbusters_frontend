@@ -9,8 +9,8 @@ import Col from 'react-bootstrap/Col';
 
 export default function Main() {
     return (
-        <div class="wrapper">
-            <Container fluid class="center">
+        <div className="wrapper">
+            <Container fluid className="center">
                 <Row>
                     <Col sm={1}></Col>
                     <Col>
