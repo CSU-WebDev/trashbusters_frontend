@@ -44,7 +44,6 @@ function TrashMap() {
           lat: marker.lat, 
           lng: marker.lng, 
           desc: desc};
-        // console.log(`New pin id: ${newPin.id}`);
         setPins([...pins, newPin]);
         setMarker(null);
         setDescription('');
@@ -75,11 +74,7 @@ function TrashMap() {
     // axios.get('http://localhost:3000/api/getPins')
     axios.get('https://trashbusters-backend.onrender.com/api/getPins')
       .then((response) => {
-        // console.log('Current pins state:', pins); // log current state
-        // console.log('API response data:', response.data);
-        // console.log('type of lat:', typeof(response.data[0].lat))
         setPins(response.data);
-        // console.log('New pins state:', pins); // log updated state
       })
       .catch((error) => {
         console.log(error);
@@ -97,7 +92,6 @@ function TrashMap() {
         onClick={handleMapClick}
       >
 
-        {/* Display all existing pins on the map */}
         {pins.map((pin, index) => (
           <MarkerF 
             key={index} 
@@ -106,7 +100,6 @@ function TrashMap() {
           </MarkerF>
         ))}
 
-        {/* Allows the user to click the map and enter a description. Creates an InfoWindow for data entry. */}
         {marker && (
           <MarkerF key={marker} position={marker}>
             <InfoWindowF onCloseClick={() => {
