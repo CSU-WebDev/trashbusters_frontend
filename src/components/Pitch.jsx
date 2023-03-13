@@ -9,12 +9,12 @@ export default function Pitch() {
         <>
             <Container id='grid-container' fluid className="center mt-2 mb-2">
                 <div className="box">
-                <Row>
-                    <Col><h3 className="text-center"> Which do you prefer? </h3></Col>
-                </Row>
-                <Row>
-                    <Col ><div className="text-center"><Pics /></div></Col>
-                </Row>
+                    <Row>
+                        <Col><h3 className="text-center"> Which do you prefer? </h3></Col>
+                    </Row>
+                    <Row>
+                        <Col ><div className="text-center"><Pics /></div></Col>
+                    </Row>
                 </div>
             </Container>
         </>
