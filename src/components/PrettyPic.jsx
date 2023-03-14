@@ -4,6 +4,6 @@ import Image from 'react-bootstrap/Image'
 
 export default function PrettyPic() {
     return (
-        <Image className="text-center" src={PrettyPicture} fluid />
+        <Image className='pic' src={PrettyPicture} fluid/>
     )
 }
