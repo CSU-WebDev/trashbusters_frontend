@@ -8,8 +8,12 @@
 }
 
 .navbar-links {
-  margin-right: 100px;
+  margin-right: 30px;
   font-size: x-large;
+}
+
+.navbar-link {
+  margin-right: 40px;
 }
 
 #navigation-bar a {
@@ -87,4 +91,8 @@
   justify-content: center;
   text-align: center;
   color: white;
+}
+
+.navbar-collapse.collapse.show, .navbar-collapse.collapsing {
+  margin-left: 50px;
 }
