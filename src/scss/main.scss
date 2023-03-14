@@ -1,0 +1,46 @@
+#about-container {
+	scroll-margin-top: 100px;
+	max-width: 500px;
+}
+#trashmap-container {
+	scroll-margin-top: 100px;
+	max-width: fit-content;
+	padding: 30px;
+}
+#contact-container {
+	scroll-margin-top: 100px;
+	max-width: 550px;
+}
+
+#main {
+	background-color: $background-color_2;
+}
+.box {
+	background-color: $background-color_3;
+	padding: 25px;
+	margin-bottom: 35px;
+	border-radius: 25px;
+	font-family: $font-family_1;
+	color: $nav-footer-color;
+	box-shadow: 1px 1px 10px 10px rgba(5, 5, 5, 0.466);
+}
+#about-paragraph {
+	font-size: 20px;
+	padding: 25px 25px 0px 25px;
+}
+#trashmap-container-col {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+.pic {
+	border-radius: 15px;
+	margin-top: 10px;
+}
+.form-input-bar {
+	max-width: 500px;
+}
+#form {
+	width: 500px;
+}

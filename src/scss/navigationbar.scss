@@ -1,0 +1,33 @@
+#navigation-bar {
+	background-color: $background-color_1;
+	font-family: $font-family_1;
+	a {
+		color: $nav-footer-color;
+	}
+}
+.navbar-links {
+	margin-right: 30px;
+	font-size: x-large;
+}
+.navbar-link {
+	margin-right: 40px;
+	&:hover {
+		text-shadow: 0 0 10px gray, 0 0 20px rgb(87, 87, 87), 0 0 30px rgb(34, 34, 34);
+		transform: scale(1.1);
+	}
+}
+.navbar-link.active {
+	text-shadow: 0 0 10px gray, 0 0 20px rgb(87, 87, 87), 0 0 30px rgb(34, 34, 34);
+	transform: scale(1.1);
+}
+#brand {
+	margin-left: 50px;
+	font-size: xx-large;
+	color: $nav-footer-color;
+}
+.navbar-collapse.collapse.show {
+	margin-left: 50px;
+}
+.navbar-collapse.collapsing {
+	margin-left: 50px;
+}
