@@ -1,27 +1,24 @@
 import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function About() {
     return (
         <>
-        <Container id='grid-container' fluid className="center mt-2 mb-2">
-            <div className="box">
+        <Container fluid id='about-container' className="box">
                 <Row>
                     <Col>
-                        <h3 className="text-center" id="about">About</h3>
+                        <h3 className="text-center">About</h3>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <p>Below is our handy dandy trash map! You can use it to mark areas on the map where you 
-                            have spotted litter. You can also check for areas that have already been mark and send 
-                            a message that the area has been cleaned.
+                        <p id='about-paragraph'>Litter is <i>never</i> fun to look at. Join the fight and help bust some trash! Below is our 
+                            trash map. You can use it to mark areas on the map where you have spotted litter. Be 
+                            sure to add a description if you drop a new pin! You can also delete pins to cleanup 
+                            sites once all trash has been removed. Thank you for making our community more beautiful!
                         </p>
                     </Col>
                 </Row>
-            </div>
         </Container>
         </>
     )

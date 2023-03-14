@@ -1,19 +1,17 @@
 import React from 'react'
 import PrettyPic from './PrettyPic'
 import UglyPic from './UglyPic'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function Pics() {
     return (
         <>
-            <Container id='grid-container' fluid className="center" >
-                <Row>
-                    <Col className="text-center"><PrettyPic /></Col>
-                    <Col className="text-center"><UglyPic /></Col>
-                </Row>
-            </Container>
+        <Container className='mt-4 mb-4'>
+            <Row className="justify-content-center">
+                <Col s={12} md={6} className="align-items-center"><PrettyPic /></Col>
+                <Col s={12} md={6} className="align-items-center"><UglyPic /></Col>
+            </Row>
+        </Container>
         </>
     )
 }

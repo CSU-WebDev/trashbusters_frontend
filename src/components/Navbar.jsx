@@ -6,18 +6,16 @@ const NavigationBar = (props) => {
 
   return (
     <>
-      <Navbar id='navigation-bar' className='sticky-top'>
-        <div className="navbar-brand">
-            <Navbar.Brand id='brand' href="">
-              Trashbusters
-            </Navbar.Brand>
-        </div>
+      <Navbar id='navigation-bar' className='sticky-top' expand="md">
+        <Navbar.Brand id='brand'>
+          Trashbusters
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="justify-content-end navbar-links" style={{ width: "100%" }}>
-            <Nav.Link className='navbar-link' href="#about">About</Nav.Link>
-            <Nav.Link className='navbar-link' href="#trashmapcontainer">Trash-Map</Nav.Link>
-            <Nav.Link className='navbar-link' href="#contact">Contact</Nav.Link>
+            <Nav.Link className='navbar-link' href="#about-container">About</Nav.Link>
+            <Nav.Link className='navbar-link' href="#trashmap-container">Trash-Map</Nav.Link>
+            <Nav.Link className='navbar-link' href="#contact-container">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

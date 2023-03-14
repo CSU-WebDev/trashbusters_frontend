@@ -1,27 +1,29 @@
 import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Row, Col } from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap'
 
 export default function Contact() {
     return (
         <>
-        <Container id='grid-container' fluid className="center mt-2 mb-2">
-            <div className="box">
-                <Row>
-                    <Col>
-                        <h3 className="text-center" id="contact">Contact Us</h3>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <p>For any questions or concerns you may have you may contact us here at:</p>
-                        <p>Email: trashbusters@realemail.com</p>
-                        <p>Phone: 101-001-1010</p>
-                        <p>Or post a message to our github at: 'insert public release here'</p>
-                    </Col>
-                </Row>
-            </div>
+        <Container id='contact-container' className='box'>
+            <Row>
+                <h3 className="text-center">Contact Us</h3>
+            </Row>
+            <Row>
+                <Col className='d-flex justify-content-center'>
+                    <Form id='form'>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" placeholder="Enter email" maxLength={50} className='form-input-bar'/>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control type="password" placeholder="Password" maxLength={50} className='form-input-bar'/>
+                        </Form.Group>
+                        <Button variant="primary" type="submit">Submit</Button>
+                    </Form>
+                </Col>
+            </Row>
         </Container>
         </>
     )

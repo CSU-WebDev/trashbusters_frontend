@@ -1,95 +1,90 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
-
-body, html, #root, .App{
-  height: 100%;
+#about-container, #trashmap-container, #contact-container {
+  scroll-margin-top: 100px;
 }
 
-/*:root {
-  --dark-mode-gray: rgb(64, 64 ,64);
-  --light-mode-offwhite: #56585a4d;
-  --background-offwhite: rgb(240, 230, 230);
-}*/
-
 #navigation-bar {
-  color: white;
   background-color: #658E9C;
   font-family: "Lucida Bright", Georgia, serif;
 }
 
-.navbar-brand {
-  margin-left: 50px;
-  font-size: xx-large;
-  color: white !important;
-}
-
 .navbar-links {
-  margin-right: 200px;
-  font-size: xx-large;
+  margin-right: 100px;
+  font-size: x-large;
 }
 
-.navbar-link {
+#navigation-bar a {
   color: white;
-  transition: all 0.1s ease-in-out;
 }
 
 .navbar-link:hover, .navbar-link.active {
-  color: white !important;
   text-shadow: 0 0 10px gray, 0 0 20px rgb(87, 87, 87), 0 0 30px rgb(34, 34, 34);
   transform: scale(1.1);
 }
 
 #brand {
-  pointer-events: none;
+  margin-left: 50px;
+  font-size: xx-large;
+  color: white;
 }
 
-.wrapper{
+#main{
   background-color: #004D21;
-}
+} 
 
 .box{
   background-color: rgb(136, 123, 10);
-  padding: 15px;
+  padding: 25px;
+  margin-bottom: 35px;
   border-radius: 25px;
   font-family: "Lucida Bright", Georgia, serif;
   color: white;
   box-shadow: 1px 1px 10px 10px rgba(5, 5, 5, 0.466);
 }
 
-.center {
+#about-paragraph {
+  font-size: 20px;
+  padding: 25px 25px 0px 25px;
+}
+
+#trashmap-container-col {
   display: flex;
-  width: 100%;
-  max-width: 60%;
-  margin: 0 auto;
   justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.height100{
-  height: 100%;
+#trashmap-container {
+  max-width: fit-content;
+  padding: 30px;
 }
 
-.row-space{
-  margin-top: 15px;
-  margin-bottom: 15px;
+.pic {
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+#about-container {
+  max-width: 500px;
+}
+
+.form-input-bar {
+  max-width: 500px;
+}
+
+#form {
+  width: 500px;
+}
+
+#contact-container {
+  max-width: 550px;
 }
 
 #footer {
   background-color: #658E9C;
-  font-family: "Lucida Bright", Georgia, serif;
-  color: white;
-  padding-top: 10px;
-}
-
-.center-component{
+  height: 50px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
-}
-
-#grid-container {
-  padding-bottom: 15px;
+  text-align: center;
+  color: white;
 }

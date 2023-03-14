@@ -3,14 +3,48 @@ import { GoogleMap, LoadScript, MarkerF, InfoWindowF } from '@react-google-maps/
 import axios from 'axios';
 
 const containerStyle = {
-  width: '400px',
-  height: '400px',
+  width: '750px',
+  height: '650px',
 };
 
 const CSU = {
   lat: 32.502447,
   lng: -84.940258
 };
+
+const infoWindowStyle = {
+  color: 'black',
+  padding: '10px',
+  borderRadius: '5px',
+  maxWidth: '200px',
+  textAlign: 'center'
+};
+
+const infoWindowInputStyle = {
+  padding: '10px 10px',
+  border: '2px solid black',
+  borderRadius: '5px'
+}
+
+const infoWindowSaveBtnStyle = {
+  backgroundColor: '#4CAF50',
+  border: 'none',
+  color: 'white',
+  padding: '10px 20px',
+  fontSize: '16px',
+  borderRadius: '5px',
+  marginTop: '10px'
+}
+
+const infoWindowDeleteBtnStyle = {
+  backgroundColor: 'red',
+  border: 'none',
+  color: 'white',
+  padding: '10px 20px',
+  fontSize: '16px',
+  borderRadius: '5px',
+  marginTop: '10px'
+}
 
 function TrashMap() {
   const [marker, setMarker] = useState(null);
@@ -88,7 +122,7 @@ function TrashMap() {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={CSU}
-        zoom={10}
+        zoom={11}
         onClick={handleMapClick}
       >
 
@@ -105,12 +139,11 @@ function TrashMap() {
             <InfoWindowF onCloseClick={() => {
               setMarker(null)
             }} position={marker}>
-              <div>
-                <h3>Latitude: {marker.lat.toFixed(6)}</h3>
-                <h3>Longitude: {marker.lng.toFixed(6)}</h3>
-                <label>Description:</label>
-                <input type="text" value={desc} onChange={handleDescriptionChange} placeholder="Enter description" />
-                <button onClick={handleSavePointClick}>Save Point</button>
+              <div style={infoWindowStyle}>
+                <p>Latitude: {marker.lat.toFixed(6)}</p>
+                <p>Longitude: {marker.lng.toFixed(6)}</p>
+                <input style={infoWindowInputStyle} type="text" value={desc} onChange={handleDescriptionChange} placeholder="Enter description" />
+                <button style={infoWindowSaveBtnStyle} onClick={handleSavePointClick}>Save Point</button>
               </div>
             </InfoWindowF>
           </MarkerF>
@@ -120,12 +153,12 @@ function TrashMap() {
             position={{ lat: selectedMarker.lat, lng: selectedMarker.lng }}
             onCloseClick={() => setSelectedMarker(null)}
           >
-            <div>
+            <div style={infoWindowStyle}>
               {console.log({selectedMarker})}
-              <h3>Latitude: {selectedMarker.lat.toFixed(6)}</h3>
-              <h3>Longitude: {selectedMarker.lng.toFixed(6)}</h3>
+              <p>Latitude: {selectedMarker.lat.toFixed(6)}</p>
+              <p>Longitude: {selectedMarker.lng.toFixed(6)}</p>
               <p>Description: {selectedMarker.desc}</p>
-              <button onClick={() => handleDeleteClick(selectedMarker._id)}>Delete Point</button>
+              <button style={infoWindowDeleteBtnStyle} onClick={() => handleDeleteClick(selectedMarker._id)}>Delete Point</button>
             </div>
           </InfoWindowF>
         )}
