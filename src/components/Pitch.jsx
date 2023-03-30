@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 export default function Pitch() {
     return (
         <>
-            <Container fluid className="mt-5 box">
+            <Container id='pitch-container' fluid className="mt-5 box">
                     <Row>
                         <Col><h3 className="text-center">Which do you prefer???</h3></Col>
                     </Row>
