@@ -22,7 +22,8 @@
     "render-start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^6.0.3"
+    "cross-env": "^6.0.3",
+    "cypress": "^12.9.0"
   }
 }
