@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 export default function Pics() {
     return (
         <>
-        <Container className='mt-4 mb-4'>
+        <Container id='pics-container' className='mt-4 mb-4'>
             <Row className="justify-content-center">
                 <Col s={12} md={6} className="align-items-center"><PrettyPic /></Col>
                 <Col s={12} md={6} className="align-items-center"><UglyPic /></Col>
