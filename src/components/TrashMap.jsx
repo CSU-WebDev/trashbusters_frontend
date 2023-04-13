@@ -126,6 +126,9 @@ function TrashMap() {
 
         {pins.map((pin, index) => (
           <MarkerF 
+            id={pin._id}
+            label={'hello world'}
+            class='742cab9e8a85f22fcd58da8d'
             key={index} 
             position={{ lat: pin.lat, lng: pin.lng }}
             onClick={() => setSelectedMarker(pin)}>

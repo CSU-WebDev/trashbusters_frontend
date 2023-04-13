@@ -21,7 +21,7 @@
     "start": "cross-env PORT=4000 react-scripts start",
     "render-start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false --coverage",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
@@ -47,6 +47,7 @@
   "devDependencies": {
     "cross-env": "^6.0.3",
     "cypress": "^12.9.0",
-    "eslint-plugin-cypress": "^2.13.2"
+    "eslint-plugin-cypress": "^2.13.2",
+    "jest": "^27.5.1"
   }
 }
