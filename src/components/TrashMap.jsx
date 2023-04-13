@@ -26,8 +26,7 @@ const infoWindowInputStyle = {
   borderRadius: '5px'
 }
 
-const infoWindowSaveBtnStyle = {
-  backgroundColor: '#4CAF50',
+const infoWindowBtnStyle = {
   border: 'none',
   color: 'white',
   padding: '10px 20px',
@@ -36,14 +35,12 @@ const infoWindowSaveBtnStyle = {
   marginTop: '10px'
 }
 
+const infoWindowSaveBtnStyle = {
+  backgroundColor: '#4CAF50',
+}
+
 const infoWindowDeleteBtnStyle = {
   backgroundColor: 'red',
-  border: 'none',
-  color: 'white',
-  padding: '10px 20px',
-  fontSize: '16px',
-  borderRadius: '5px',
-  marginTop: '10px'
 }
 
 function TrashMap() {
@@ -120,6 +117,7 @@ function TrashMap() {
       googleMapsApiKey="AIzaSyAUJ9Qj6tUo8_wl-ODJ3Ddm5LQPRztaguI"
     >
       <GoogleMap
+        id='google-map'
         mapContainerStyle={containerStyle}
         center={CSU}
         zoom={11}
@@ -135,7 +133,7 @@ function TrashMap() {
         ))}
 
         {marker && (
-          <MarkerF key={marker} position={marker}>
+          <MarkerF id='selected-marker' key={marker} position={marker}>
             <InfoWindowF onCloseClick={() => {
               setMarker(null)
             }} position={marker}>
@@ -143,7 +141,7 @@ function TrashMap() {
                 <p>Latitude: {marker.lat.toFixed(6)}</p>
                 <p>Longitude: {marker.lng.toFixed(6)}</p>
                 <input style={infoWindowInputStyle} type="text" value={desc} onChange={handleDescriptionChange} placeholder="Enter description" />
-                <button style={infoWindowSaveBtnStyle} onClick={handleSavePointClick}>Save Point</button>
+                <button style={{...infoWindowSaveBtnStyle, ...infoWindowBtnStyle}} onClick={handleSavePointClick}>Save Point</button>
               </div>
             </InfoWindowF>
           </MarkerF>
@@ -158,7 +156,7 @@ function TrashMap() {
               <p>Latitude: {selectedMarker.lat.toFixed(6)}</p>
               <p>Longitude: {selectedMarker.lng.toFixed(6)}</p>
               <p>Description: {selectedMarker.desc}</p>
-              <button style={infoWindowDeleteBtnStyle} onClick={() => handleDeleteClick(selectedMarker._id)}>Delete Point</button>
+              <button style={{...infoWindowBtnStyle, ...infoWindowDeleteBtnStyle}} onClick={() => handleDeleteClick(selectedMarker._id)}>Delete Point</button>
             </div>
           </InfoWindowF>
         )}
