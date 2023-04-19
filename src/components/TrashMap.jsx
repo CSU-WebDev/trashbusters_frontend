@@ -127,8 +127,7 @@ function TrashMap() {
         {pins.map((pin, index) => (
           <MarkerF 
             id={pin._id}
-            label={'hello world'}
-            class='742cab9e8a85f22fcd58da8d'
+            // className='742cab9e8a85f22fcd58da8d'
             key={index} 
             position={{ lat: pin.lat, lng: pin.lng }}
             onClick={() => setSelectedMarker(pin)}>
@@ -144,7 +143,7 @@ function TrashMap() {
                 <p>Latitude: {marker.lat.toFixed(6)}</p>
                 <p>Longitude: {marker.lng.toFixed(6)}</p>
                 <input style={infoWindowInputStyle} type="text" value={desc} onChange={handleDescriptionChange} placeholder="Enter description" />
-                <button style={{...infoWindowSaveBtnStyle, ...infoWindowBtnStyle}} onClick={handleSavePointClick}>Save Point</button>
+                <button id='save-btn' style={{...infoWindowSaveBtnStyle, ...infoWindowBtnStyle}} onClick={handleSavePointClick}>Save Point</button>
               </div>
             </InfoWindowF>
           </MarkerF>
@@ -159,7 +158,7 @@ function TrashMap() {
               <p>Latitude: {selectedMarker.lat.toFixed(6)}</p>
               <p>Longitude: {selectedMarker.lng.toFixed(6)}</p>
               <p>Description: {selectedMarker.desc}</p>
-              <button style={{...infoWindowBtnStyle, ...infoWindowDeleteBtnStyle}} onClick={() => handleDeleteClick(selectedMarker._id)}>Delete Point</button>
+              <button id='delete-btn' style={{...infoWindowBtnStyle, ...infoWindowDeleteBtnStyle}} onClick={() => handleDeleteClick(selectedMarker._id)}>Delete Point</button>
             </div>
           </InfoWindowF>
         )}
