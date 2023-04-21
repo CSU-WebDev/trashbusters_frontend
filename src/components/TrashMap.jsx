@@ -142,7 +142,7 @@ function TrashMap() {
               <div style={infoWindowStyle}>
                 <p>Latitude: {marker.lat.toFixed(6)}</p>
                 <p>Longitude: {marker.lng.toFixed(6)}</p>
-                <input style={infoWindowInputStyle} type="text" value={desc} onChange={handleDescriptionChange} placeholder="Enter description" />
+                <input id='new-pin-desc-input' style={infoWindowInputStyle} type="text" value={desc} onChange={handleDescriptionChange} placeholder="Enter description" />
                 <button id='save-btn' style={{...infoWindowSaveBtnStyle, ...infoWindowBtnStyle}} onClick={handleSavePointClick}>Save Point</button>
               </div>
             </InfoWindowF>
