@@ -4,7 +4,6 @@ import { Button, Form } from 'react-bootstrap'
 
 export default function Contact() {
     return (
-        <>
         <Container id='contact-container' className='box'>
             <Row>
                 <h3 className="text-center">Contact Us</h3>
@@ -25,6 +24,5 @@ export default function Contact() {
                 </Col>
             </Row>
         </Container>
-        </>
     )
 }

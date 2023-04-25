@@ -113,57 +113,59 @@ function TrashMap() {
   }, []);
   
   return (
-    <LoadScript
-      googleMapsApiKey="AIzaSyAUJ9Qj6tUo8_wl-ODJ3Ddm5LQPRztaguI"
-    >
-      <GoogleMap
-        id='google-map'
-        mapContainerStyle={containerStyle}
-        center={CSU}
-        zoom={11}
-        onClick={handleMapClick}
+    <>
+      <LoadScript
+        googleMapsApiKey="AIzaSyAUJ9Qj6tUo8_wl-ODJ3Ddm5LQPRztaguI"
       >
+        <GoogleMap
+          id='google-map'
+          mapContainerStyle={containerStyle}
+          center={CSU}
+          zoom={11}
+          onClick={handleMapClick}
+        >
 
-        {pins.map((pin, index) => (
-          <MarkerF 
-            id={pin._id}
-            // className='742cab9e8a85f22fcd58da8d'
-            key={index} 
-            position={{ lat: pin.lat, lng: pin.lng }}
-            onClick={() => setSelectedMarker(pin)}>
-          </MarkerF>
-        ))}
+          {pins.map((pin, index) => (
+            <MarkerF 
+              id={pin._id}
+              key={index} 
+              position={{ lat: pin.lat, lng: pin.lng }}
+              onClick={() => setSelectedMarker(pin)} />
+          ))}
 
-        {marker && (
-          <MarkerF id='selected-marker' key={marker} position={marker}>
-            <InfoWindowF onCloseClick={() => {
-              setMarker(null)
-            }} position={marker}>
+          {marker && (
+            <MarkerF id='selected-marker' key={marker} position={marker}>
+              <InfoWindowF 
+                onCloseClick={() => {
+                  setMarker(null)
+                }} 
+                position={marker}>
+                <div style={infoWindowStyle}>
+                  <p>Latitude: {marker.lat.toFixed(6)}</p>
+                  <p>Longitude: {marker.lng.toFixed(6)}</p>
+                  <input id='new-pin-desc-input' style={infoWindowInputStyle} type="text" value={desc} onChange={handleDescriptionChange} placeholder="Enter description" />
+                  <button id='save-btn' style={{...infoWindowSaveBtnStyle, ...infoWindowBtnStyle}} onClick={handleSavePointClick}>Save Point</button>
+                </div>
+              </InfoWindowF>
+            </MarkerF>
+          )}
+          {selectedMarker && (
+            <InfoWindowF
+              position={{ lat: selectedMarker.lat, lng: selectedMarker.lng }}
+              onCloseClick={() => setSelectedMarker(null)}
+            >
               <div style={infoWindowStyle}>
-                <p>Latitude: {marker.lat.toFixed(6)}</p>
-                <p>Longitude: {marker.lng.toFixed(6)}</p>
-                <input id='new-pin-desc-input' style={infoWindowInputStyle} type="text" value={desc} onChange={handleDescriptionChange} placeholder="Enter description" />
-                <button id='save-btn' style={{...infoWindowSaveBtnStyle, ...infoWindowBtnStyle}} onClick={handleSavePointClick}>Save Point</button>
+                {console.log({selectedMarker})}
+                <p>Latitude: {selectedMarker.lat.toFixed(6)}</p>
+                <p>Longitude: {selectedMarker.lng.toFixed(6)}</p>
+                <p>Description: {selectedMarker.desc}</p>
+                <button id='delete-btn' style={{...infoWindowBtnStyle, ...infoWindowDeleteBtnStyle}} onClick={() => handleDeleteClick(selectedMarker._id)}>Delete Point</button>
               </div>
             </InfoWindowF>
-          </MarkerF>
-        )}
-        {selectedMarker && (
-          <InfoWindowF
-            position={{ lat: selectedMarker.lat, lng: selectedMarker.lng }}
-            onCloseClick={() => setSelectedMarker(null)}
-          >
-            <div style={infoWindowStyle}>
-              {console.log({selectedMarker})}
-              <p>Latitude: {selectedMarker.lat.toFixed(6)}</p>
-              <p>Longitude: {selectedMarker.lng.toFixed(6)}</p>
-              <p>Description: {selectedMarker.desc}</p>
-              <button id='delete-btn' style={{...infoWindowBtnStyle, ...infoWindowDeleteBtnStyle}} onClick={() => handleDeleteClick(selectedMarker._id)}>Delete Point</button>
-            </div>
-          </InfoWindowF>
-        )}
-      </GoogleMap>
-    </LoadScript>
+          )}
+        </GoogleMap>
+      </LoadScript>
+    </>
   )
 }
 

@@ -7,18 +7,19 @@
 }
 .navbar-links {
 	margin-right: 30px;
-	font-size: x-large;
+	font-size: $medium-font;
+	width: 100%;
 }
 .navbar-link {
 	margin-right: 40px;
 	&:hover, &.active {
-		text-shadow: 0 0 10px gray, 0 0 20px rgb(87, 87, 87), 0 0 30px rgb(34, 34, 34);
+		text-shadow: 0 0 10px $light-gray, 0 0 20px $medium-gray, 0 0 30px $dark-gray;
 	}
 }
 
 #brand {
 	margin-left: 50px;
-	font-size: xx-large;
+	font-size: $large-font;
 	color: $nav-footer-color;
 }
 .navbar-collapse.collapse.show {

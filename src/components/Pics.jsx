@@ -1,18 +1,21 @@
 import React from 'react'
-import PrettyPic from './PrettyPic'
-import UglyPic from './UglyPic'
+import Pic from './Pic'
 import { Container, Row, Col } from 'react-bootstrap'
+import UglyPicture from '../images/litter-before.jpg'
+import PrettyPicture from '../images/litter-after.jpg'
 
 export default function Pics() {
     return (
-        <>
         <Container id='pics-container' className='mt-4 mb-4'>
             <Row className="justify-content-center">
-                <Col s={12} md={6} className="align-items-center"><PrettyPic /></Col>
-                <Col s={12} md={6} className="align-items-center"><UglyPic /></Col>
+                <Col s={12} md={6} className="align-items-center">
+                    <Pic src={UglyPicture} />
+                </Col>
+                <Col s={12} md={6} className="align-items-center">
+                    <Pic src={PrettyPicture} />
+                </Col>
             </Row>
         </Container>
-        </>
     )
 }
 

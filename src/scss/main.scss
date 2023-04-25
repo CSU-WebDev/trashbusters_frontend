@@ -11,7 +11,6 @@
 	scroll-margin-top: 100px;
 	max-width: 550px;
 }
-
 #main {
 	background-color: $background-color_2;
 }
@@ -22,10 +21,10 @@
 	border-radius: 25px;
 	font-family: $font-family_1;
 	color: $nav-footer-color;
-	box-shadow: 1px 1px 10px 10px rgba(5, 5, 5, 0.466);
+	box-shadow: 1px 1px 10px 10px $dark-gray;
 }
 #about-paragraph {
-	font-size: 20px;
+	font-size: $small-font;
 	padding: 25px 25px 0px 25px;
 }
 #trashmap-container-col {
