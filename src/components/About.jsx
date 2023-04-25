@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 export default function About() {
     return (
-        <>
         <Container fluid id='about-container' className="box">
                 <Row>
                     <Col>
@@ -20,6 +19,5 @@ export default function About() {
                     </Col>
                 </Row>
         </Container>
-        </>
     )
 }
