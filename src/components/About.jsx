@@ -12,7 +12,7 @@ export default function About() {
                 </Row>
                 <Row>
                     <Col>
-                        <p id='about-paragraph'>Litter is <i>never</i> fun to look at. Join the fight and help bust some trash! Below is our 
+                        <p id='about-paragraph' data-testid='about-paragraph'>Litter is <i>never</i> fun to look at. Join the fight and help bust some trash! Below is our 
                             trash map. You can use it to mark areas on the map where you have spotted litter. Be 
                             sure to add a description if you drop a new pin! You can also delete pins to cleanup 
                             sites once all trash has been removed. Thank you for making our community more beautiful!
