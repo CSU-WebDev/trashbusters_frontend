@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { GoogleMap, LoadScript, MarkerF, InfoWindowF } from '@react-google-maps/api';
 import axios from 'axios';
+import Toaster from './Toaster';
+import Spinner from 'react-bootstrap/Spinner';
 
 const containerStyle = {
   width: '750px',
@@ -48,6 +50,9 @@ function TrashMap() {
   const [desc, setDescription] = useState('');
   const [pins, setPins] = useState([]);
   const [selectedMarker, setSelectedMarker] = useState(null);
+  const [apiStatus, setApiStatus] = useState(null);
+  const [apiMessage, setApiMessage] = useState(null);
+
 
   const handleMapClick = (event) => {
     const lat = event.latLng.lat();
@@ -62,6 +67,7 @@ function TrashMap() {
 
   const handleSavePointClick = () => {
     if (marker && desc) {
+      setApiStatus('PENDING')
       // axios.post('http://localhost:3000/api/addPin', {
       axios.post('https://trashbusters-backend.onrender.com/api/addPin', {
         lat: marker.lat,
@@ -69,7 +75,7 @@ function TrashMap() {
         desc: desc
       })
       .then((response) => {
-        console.log(response.data)
+        // console.log(response.data)
         const newPin = { 
           _id: response.data._id,
           lat: marker.lat, 
@@ -78,37 +84,49 @@ function TrashMap() {
         setPins([...pins, newPin]);
         setMarker(null);
         setDescription('');
+        setApiStatus(null)
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
+        setApiStatus('ERROR')
+        setApiMessage('Error while saving')
+        setMarker(null);
       });
-      setMarker(null);
     }
   };
 
   const handleDeleteClick = (_id) => {
-    console.log(`posting id: ${_id}`)
+    // console.log(`posting id: ${_id}`)
+    setApiStatus('PENDING')
     // axios.delete(`http://localhost:3000/api/deletePin/${_id}`)
     axios.delete(`https://trashbusters-backend.onrender.com/api/deletePin/${_id}`)
       .then(() => {
-        console.log(pins)
+        // console.log(pins)
         setPins(pins.filter(pin => pin._id !== _id));
-        console.log(pins)
+        // console.log(pins)
+        setApiStatus(null)
+
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
+        setApiStatus('ERROR')
+        setApiMessage('Error while deleting pin')
       });
       setSelectedMarker(null);
   }
 
   useEffect(() => {
+    setApiStatus('PENDING')
     // axios.get('http://localhost:3000/api/getPins')
     axios.get('https://trashbusters-backend.onrender.com/api/getPins')
       .then((response) => {
         setPins(response.data);
+        setApiStatus(null)
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
+        setApiStatus('ERROR')
+        setApiMessage('Error while getting all pins')
       });
   }, []);
   
@@ -155,7 +173,7 @@ function TrashMap() {
               onCloseClick={() => setSelectedMarker(null)}
             >
               <div style={infoWindowStyle}>
-                {console.log({selectedMarker})}
+                {/* {console.log({selectedMarker})} */}
                 <p>Latitude: {selectedMarker.lat.toFixed(6)}</p>
                 <p>Longitude: {selectedMarker.lng.toFixed(6)}</p>
                 <p>Description: {selectedMarker.desc}</p>
@@ -165,6 +183,9 @@ function TrashMap() {
           )}
         </GoogleMap>
       </LoadScript>
+      <Toaster apiStatus={apiStatus} apiMessage={apiMessage} setApiStatus={setApiStatus}/>
+      {apiStatus === "PENDING" && <Spinner id='spinner' animation="border" variant="dark" />}
+      {/* \setShow( props.apiStatus === "ERROR" ? true : false) */}
     </>
   )
 }
