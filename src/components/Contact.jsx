@@ -10,16 +10,25 @@ export default function Contact() {
             </Row>
             <Row>
                 <Col className='d-flex justify-content-center'>
-                    <Form id='form'>
-                        <Form.Group className="mb-3">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" maxLength={50} className='form-input-bar'/>
+                    <Form id='form' action="https://formspree.io/f/xyyaglza" method="POST">
+                        <Form.Group controlId="formBasicEmail" className="mb-3">
+                            <Form.Label className='mb-2'>Email address</Form.Label>
+                            <Form.Control type="email" placeholder="Enter email" name="email" required/>
                         </Form.Group>
-                        <Form.Group className="mb-3">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" maxLength={50} className='form-input-bar'/>
+
+                        <Form.Group controlId="formBasicName" className="mb-3">
+                            <Form.Label className='mb-2'>Name</Form.Label>
+                            <Form.Control type="text" placeholder="Enter your name" name="name" required data-testid="name-input"/>
                         </Form.Group>
-                        <Button variant="primary" type="submit">Submit</Button>
+
+                        <Form.Group controlId="formBasicMessage" className="mb-3">
+                            <Form.Label className='mb-2'>Message</Form.Label>
+                            <Form.Control type="textarea" rows="3" placeholder="Enter your message" name="message" required data-testid="message-input"/>
+                        </Form.Group>
+
+                        <Button className="btn-lg" variant="primary" type="submit">
+                            Submit
+                        </Button>
                     </Form>
                 </Col>
             </Row>
