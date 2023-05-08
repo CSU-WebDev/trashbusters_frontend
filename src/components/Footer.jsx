@@ -1,18 +1,15 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentDate = new Date().toLocaleString('default', { month: 'long', year: "numeric" });
 
   return (
     <footer id='footer'>
-      <Container fluid>
+      <Container>
         <Row>
-          <Col className="text-center">
-            <p className='mb-1'>Copyright &copy; {currentYear}</p>
-            <p>Trashbusters is not affiliated with any organization. This program was made for a college project.</p>
+          <Col>
+            <p>Trashbusters &copy; {currentDate} </p>
           </Col>
         </Row>
       </Container>

@@ -1,22 +1,16 @@
 import React from 'react'
 import Pics from './Pics'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function Pitch() {
     return (
-        <>
-            <Container id='grid-container' fluid class="center" className="mt-2 mb-2">
-                <div class="box">
-                <Row>
-                    <Col><h3 class="text-center"> Which do you prefer? </h3></Col>
-                </Row>
-                <Row>
-                    <Col ><div class="text-center"><Pics /></div></Col>
-                </Row>
-                </div>
+            <Container id='pitch-container' fluid className="mt-5 box">
+                    <Row>
+                        <Col><h3 className="text-center">Which do you prefer???</h3></Col>
+                    </Row>
+                    <Row>
+                        <Col ><Pics /></Col>
+                    </Row>
             </Container>
-        </>
     )
 }
