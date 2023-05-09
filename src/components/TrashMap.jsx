@@ -133,14 +133,10 @@ function TrashMap() {
   
   return (
     <>
-     <Container>
-                <Row>
-                    <Col sm={12}>
-    <div style={{
-        }}>
+    <div id="trashmap">
       <LoadScript
         googleMapsApiKey="AIzaSyAUJ9Qj6tUo8_wl-ODJ3Ddm5LQPRztaguI"
-        onLoad={() => setApiStatus('PENDING')}
+        onLoad={() => setApiStatus(null)}
       >
         <GoogleMap
           id='google-map'
@@ -190,13 +186,11 @@ function TrashMap() {
           )}
         </GoogleMap>
       </LoadScript>
-    </div>
-    </Col>
       <Toaster apiStatus={apiStatus} apiMessage={apiMessage} setApiStatus={setApiStatus}/>
-      {apiStatus === null && <CustomSpinner/>}
+      {apiStatus === 'PENDING' && <CustomSpinner/>}
       {/* \setShow( props.apiStatus === "ERROR" ? true : false) */}
-      </Row>
-    </Container>
+    </div>
+
     </>
   )
 }

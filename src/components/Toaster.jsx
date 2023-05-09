@@ -10,6 +10,7 @@ export default function Toaster(props) {
     },[props.apiStatus])
     if (props.apiStatus === 'ERROR') {
         return (
+        <div id='toasty'>
         <Row>
             <Col md={6} className="mb-2">
             <Toast show={show} onClose={() => {
@@ -27,6 +28,7 @@ export default function Toaster(props) {
             </Toast>
             </Col>
         </Row>
+        </div>
         )
     }
     return null

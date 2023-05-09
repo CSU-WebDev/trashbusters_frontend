@@ -5,13 +5,8 @@ import Spinner from 'react-bootstrap/Spinner';
 
 export default function CustomSpinner(props) {
     return (
-        <Col sm={12}>
-        <div style={{
-          zIndex: 1,
-          position: "absolute",
-        }}>
+        <div id="spinnerDiv">
             <Spinner id='spinner' animation="border" variant="dark" />
         </div>
-        </Col>
     )
 }
