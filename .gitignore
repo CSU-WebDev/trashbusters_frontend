@@ -25,3 +25,6 @@ dist-ssr
 
 # Cypress videos
 /cypress/videos
+
+# Jest
+coverage/

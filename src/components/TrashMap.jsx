@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GoogleMap, LoadScript, MarkerF, InfoWindowF } from '@react-google-maps/api';
-import axios from 'axios';
+import axios from 'axios-es6';
 import Toaster from './Toaster';
 import Spinner from 'react-bootstrap/Spinner';
 
@@ -75,7 +75,6 @@ function TrashMap() {
         desc: desc
       })
       .then((response) => {
-        // console.log(response.data)
         const newPin = { 
           _id: response.data._id,
           lat: marker.lat, 
@@ -87,7 +86,6 @@ function TrashMap() {
         setApiStatus(null)
       })
       .catch((error) => {
-        // console.log(error);
         setApiStatus('ERROR')
         setApiMessage('Error while saving')
         setMarker(null);
@@ -96,19 +94,15 @@ function TrashMap() {
   };
 
   const handleDeleteClick = (_id) => {
-    // console.log(`posting id: ${_id}`)
     setApiStatus('PENDING')
     // axios.delete(`http://localhost:3000/api/deletePin/${_id}`)
     axios.delete(`https://trashbusters-backend.onrender.com/api/deletePin/${_id}`)
       .then(() => {
-        // console.log(pins)
         setPins(pins.filter(pin => pin._id !== _id));
-        // console.log(pins)
         setApiStatus(null)
 
       })
       .catch((error) => {
-        // console.log(error);
         setApiStatus('ERROR')
         setApiMessage('Error while deleting pin')
       });
@@ -124,7 +118,6 @@ function TrashMap() {
         setApiStatus(null)
       })
       .catch((error) => {
-        // console.log(error);
         setApiStatus('ERROR')
         setApiMessage('Error while getting all pins')
       });
@@ -137,6 +130,7 @@ function TrashMap() {
       >
         <GoogleMap
           id='google-map'
+          data-testid='google-map'
           mapContainerStyle={containerStyle}
           center={CSU}
           zoom={11}
@@ -152,7 +146,7 @@ function TrashMap() {
           ))}
 
           {marker && (
-            <MarkerF id='selected-marker' key={marker} position={marker}>
+            <MarkerF id='selected-marker' data-testid='selected-marker' key={marker} position={marker}>
               <InfoWindowF 
                 onCloseClick={() => {
                   setMarker(null)
@@ -173,7 +167,6 @@ function TrashMap() {
               onCloseClick={() => setSelectedMarker(null)}
             >
               <div style={infoWindowStyle}>
-                {/* {console.log({selectedMarker})} */}
                 <p>Latitude: {selectedMarker.lat.toFixed(6)}</p>
                 <p>Longitude: {selectedMarker.lng.toFixed(6)}</p>
                 <p>Description: {selectedMarker.desc}</p>
@@ -184,7 +177,7 @@ function TrashMap() {
         </GoogleMap>
       </LoadScript>
       <Toaster apiStatus={apiStatus} apiMessage={apiMessage} setApiStatus={setApiStatus}/>
-      {apiStatus === "PENDING" && <Spinner id='spinner' animation="border" variant="dark" />}
+      {apiStatus === "PENDING" && <Spinner id='spinner' data-testid='spinner' animation="border" variant="dark" />}
       {/* \setShow( props.apiStatus === "ERROR" ? true : false) */}
     </>
   )

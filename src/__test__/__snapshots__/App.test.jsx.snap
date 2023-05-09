@@ -1,0 +1,324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <nav
+      class="sticky-top navbar navbar-expand-md navbar-light"
+      id="navigation-bar"
+    >
+      <span
+        class="navbar-brand"
+        id="brand"
+      >
+        Trashbusters
+      </span>
+      <button
+        aria-controls="responsive-navbar-nav"
+        aria-label="Toggle navigation"
+        class="navbar-toggler collapsed"
+        type="button"
+      >
+        <span
+          class="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        class="navbar-collapse collapse"
+        id="responsive-navbar-nav"
+      >
+        <div
+          class="justify-content-end navbar-links navbar-nav"
+        >
+          <a
+            class="navbar-link nav-link"
+            data-rr-ui-event-key="#about-container"
+            href="#about-container"
+          >
+            About
+          </a>
+          <a
+            class="navbar-link nav-link"
+            data-rr-ui-event-key="#trashmap-container"
+            href="#trashmap-container"
+            id="trashmap-link"
+          >
+            Trash-Map
+          </a>
+          <a
+            class="navbar-link nav-link"
+            data-rr-ui-event-key="#contact-container"
+            href="#contact-container"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="container-fluid"
+      data-testid="main"
+      id="main"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col"
+        >
+          <div
+            class="mt-5 box container-fluid"
+            data-testid="pitch-container"
+            id="pitch-container"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+              >
+                <h3
+                  class="text-center"
+                >
+                  Which do you prefer???
+                </h3>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+              >
+                <div
+                  class="mt-4 mb-4 container"
+                  data-testid="pics-container"
+                  id="pics-container"
+                >
+                  <div
+                    class="justify-content-center row"
+                    data-testid="pics-row"
+                  >
+                    <div
+                      class="align-items-center col-md-6"
+                      data-testid="pics-col-1"
+                      s="12"
+                    >
+                      <img
+                        class="pic img-fluid"
+                        data-testid="pic"
+                        src="litter-before.jpg"
+                      />
+                    </div>
+                    <div
+                      class="align-items-center col-md-6"
+                      data-testid="pics-col-2"
+                      s="12"
+                    >
+                      <img
+                        class="pic img-fluid"
+                        data-testid="pic"
+                        src="litter-after.jpg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="box container-fluid"
+            data-testid="about-container"
+            id="about-container"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+              >
+                <h3
+                  class="text-center"
+                >
+                  About
+                </h3>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+              >
+                <p
+                  data-testid="about-paragraph"
+                  id="about-paragraph"
+                >
+                  Litter is 
+                  <i>
+                    never
+                  </i>
+                   fun to look at. Join the fight and help bust some trash! Below is our trash map. You can use it to mark areas on the map where you have spotted litter. Be sure to add a description if you drop a new pin! You can also delete pins to cleanup sites once all trash has been removed. Thank you for making our community more beautiful!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="box container"
+            data-testid="trashmap-container"
+            id="trashmap-container"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+              >
+                <h3
+                  class="text-center"
+                >
+                  Trash Map
+                </h3>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+                id="trashmap-container-col"
+              >
+                <div />
+                <div>
+                  Loading...
+                </div>
+                <div
+                  class="spinner-border text-dark"
+                  data-testid="spinner"
+                  id="spinner"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="box container"
+            data-testid="contact-container"
+            id="contact-container"
+          >
+            <div
+              class="row"
+            >
+              <h3
+                class="text-center"
+              >
+                Contact Us
+              </h3>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="d-flex justify-content-center col"
+              >
+                <form
+                  action="https://formspree.io/f/xyyaglza"
+                  class=""
+                  data-testid="form"
+                  id="form"
+                  method="POST"
+                >
+                  <div
+                    class="mb-3"
+                  >
+                    <label
+                      class="mb-2 form-label"
+                      for="formBasicEmail"
+                    >
+                      Email address
+                    </label>
+                    <input
+                      class="form-control"
+                      id="formBasicEmail"
+                      name="email"
+                      placeholder="Enter email"
+                      required=""
+                      type="email"
+                    />
+                  </div>
+                  <div
+                    class="mb-3"
+                  >
+                    <label
+                      class="mb-2 form-label"
+                      for="formBasicName"
+                    >
+                      Name
+                    </label>
+                    <input
+                      class="form-control"
+                      data-testid="name-input"
+                      id="formBasicName"
+                      name="name"
+                      placeholder="Enter your name"
+                      required=""
+                      type="text"
+                    />
+                  </div>
+                  <div
+                    class="mb-3"
+                  >
+                    <label
+                      class="mb-2 form-label"
+                      for="formBasicMessage"
+                    >
+                      Message
+                    </label>
+                    <input
+                      class="form-control"
+                      data-testid="message-input"
+                      id="formBasicMessage"
+                      name="message"
+                      placeholder="Enter your message"
+                      required=""
+                      rows="3"
+                      type="textarea"
+                    />
+                  </div>
+                  <button
+                    class="btn-lg btn btn-primary"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      data-testid="footer"
+      id="footer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <p>
+              Trashbusters © May 2023 
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

@@ -7,7 +7,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 export default function Main() {
     return (
-        <Container id="main" fluid>
+        <Container id="main" data-testid='main' fluid>
             <Row>
                 <Col>
                     <Pitch />

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrashMapContainer component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="box container"
+    data-testid="trashmap-container"
+    id="trashmap-container"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col"
+      >
+        <h3
+          class="text-center"
+        >
+          Trash Map
+        </h3>
+      </div>
+    </div>
+    <div
+      class="row"
+    >
+      <div
+        class="col"
+        id="trashmap-container-col"
+      >
+        <div />
+        <div>
+          Loading...
+        </div>
+        <div
+          class="spinner-border text-dark"
+          data-testid="spinner"
+          id="spinner"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

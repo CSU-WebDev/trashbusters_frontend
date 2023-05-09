@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 export default function About() {
     return (
-        <Container fluid id='about-container' className="box">
+        <Container fluid id='about-container' data-testid="about-container" className="box">
                 <Row>
                     <Col>
                         <h3 className="text-center">About</h3>
