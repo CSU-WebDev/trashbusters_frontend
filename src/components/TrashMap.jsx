@@ -3,7 +3,6 @@ import { GoogleMap, LoadScript, MarkerF, InfoWindowF } from '@react-google-maps/
 import axios from 'axios-es6';
 import Toaster from './Toaster';
 import CustomSpinner from './CustomSpinner';
-import { Container, Row, Col } from 'react-bootstrap'
 
 const containerStyle = {
   width: '750px',
