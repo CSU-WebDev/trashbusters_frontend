@@ -10,6 +10,7 @@ export default function Toaster(props) {
     },[props.apiStatus])
     if (props.apiStatus === 'ERROR') {
         return (
+        <div id='toasty'>
         <Row data-testid='toaster-container'>
             <Col md={6} className="mb-2">
             <Toast 
@@ -31,6 +32,7 @@ export default function Toaster(props) {
             </Toast>
             </Col>
         </Row>
+        </div>
         )
     }
     return null

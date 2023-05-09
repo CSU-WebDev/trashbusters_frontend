@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { GoogleMap, LoadScript, MarkerF, InfoWindowF } from '@react-google-maps/api';
 import axios from 'axios-es6';
 import Toaster from './Toaster';
-import Spinner from 'react-bootstrap/Spinner';
+import CustomSpinner from './CustomSpinner';
+import { Container, Row, Col } from 'react-bootstrap'
 
 const containerStyle = {
   width: '750px',
@@ -125,8 +126,10 @@ function TrashMap() {
   
   return (
     <>
+    <div id="trashmap">
       <LoadScript
         googleMapsApiKey="AIzaSyAUJ9Qj6tUo8_wl-ODJ3Ddm5LQPRztaguI"
+        onLoad={() => setApiStatus(null)}
       >
         <GoogleMap
           id='google-map'
@@ -177,8 +180,10 @@ function TrashMap() {
         </GoogleMap>
       </LoadScript>
       <Toaster apiStatus={apiStatus} apiMessage={apiMessage} setApiStatus={setApiStatus}/>
-      {apiStatus === "PENDING" && <Spinner id='spinner' data-testid='spinner' animation="border" variant="dark" />}
+      {apiStatus === 'PENDING' && <CustomSpinner id='spinner' data-testid='spinner'/>}
       {/* \setShow( props.apiStatus === "ERROR" ? true : false) */}
+    </div>
+
     </>
   )
 }
