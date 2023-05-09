@@ -4,13 +4,13 @@ import { Button, Form } from 'react-bootstrap'
 
 export default function Contact() {
     return (
-        <Container id='contact-container' className='box'>
+        <Container id='contact-container' data-testid="contact-container" className='box'>
             <Row>
                 <h3 className="text-center">Contact Us</h3>
             </Row>
             <Row>
                 <Col className='d-flex justify-content-center'>
-                    <Form id='form' action="https://formspree.io/f/xyyaglza" method="POST">
+                    <Form id='form' data-testid="form" action="https://formspree.io/f/xyyaglza" method="POST">
                         <Form.Group controlId="formBasicEmail" className="mb-3">
                             <Form.Label className='mb-2'>Email address</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" name="email" required/>

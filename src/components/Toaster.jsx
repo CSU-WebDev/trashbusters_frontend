@@ -11,11 +11,15 @@ export default function Toaster(props) {
     if (props.apiStatus === 'ERROR') {
         return (
         <div id='toasty'>
-        <Row>
+        <Row data-testid='toaster-container'>
             <Col md={6} className="mb-2">
-            <Toast show={show} onClose={() => {
-                props.setApiStatus(null) 
-                setShow(false)}}>
+            <Toast 
+                data-testid='toaster'
+                show={show} 
+                onClose={() => {
+                    props.setApiStatus(null) 
+                    setShow(false)}
+                }>
                 <Toast.Header>
                 <img
                     src="holder.js/20x20?text=%20"

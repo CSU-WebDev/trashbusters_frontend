@@ -5,7 +5,7 @@ export default function Footer() {
   const currentDate = new Date().toLocaleString('default', { month: 'long', year: "numeric" });
 
   return (
-    <footer id='footer'>
+    <footer id='footer' data-testid='footer'>
       <Container>
         <Row>
           <Col>
