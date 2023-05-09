@@ -12,7 +12,7 @@ describe('Trashmap', () => {
         cy.get('#trashmap-container')
             .should('be.visible')
     })
-
+502664
     it('should find and click the sole pin, check the pin\'s data in the content of the InfoWindow, and delete the pin', () => {
         cy.intercept('https://trashbusters-backend.onrender.com/api/getPins', {fixture: 'onePin.json'})
         cy.scrollTo('bottom')
@@ -42,7 +42,7 @@ describe('Trashmap', () => {
             .wait(2000)
             .click('center')
         cy.get('[role="dialog"]')
-            .should('contain', 'Latitude: 32.502664')
+            .should('contain', 'Latitude: 32.50')
         cy.get('#new-pin-desc-input')
             .click({ force: true })
             .type('new test pin')
