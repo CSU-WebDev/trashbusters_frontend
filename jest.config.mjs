@@ -8,4 +8,8 @@ export default {
   transform: {
     "^.+\\.(js|jsx|mjs)$": "babel-jest",
   },
+  coveragePathIgnorePatterns: [
+    "/node_modules/",
+    "/src/index.js"
+  ],
 };

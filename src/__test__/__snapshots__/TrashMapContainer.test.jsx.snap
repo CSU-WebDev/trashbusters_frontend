@@ -27,15 +27,22 @@ exports[`TrashMapContainer component matches snapshot 1`] = `
         class="col"
         id="trashmap-container-col"
       >
-        <div />
-        <div>
-          Loading...
-        </div>
         <div
-          class="spinner-border text-dark"
-          data-testid="spinner"
-          id="spinner"
-        />
+          id="trashmap"
+        >
+          <div />
+          <div>
+            Loading...
+          </div>
+          <div
+            id="spinnerDiv"
+          >
+            <div
+              class="spinner-border text-dark"
+              id="spinner"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>

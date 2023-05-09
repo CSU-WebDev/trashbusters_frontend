@@ -12,7 +12,7 @@ describe('Trashmap', () => {
         cy.get('#trashmap-container')
             .should('be.visible')
     })
-502664
+
     it('should find and click the sole pin, check the pin\'s data in the content of the InfoWindow, and delete the pin', () => {
         cy.intercept('https://trashbusters-backend.onrender.com/api/getPins', {fixture: 'onePin.json'})
         cy.scrollTo('bottom')

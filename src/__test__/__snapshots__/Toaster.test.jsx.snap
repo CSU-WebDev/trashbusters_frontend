@@ -3,43 +3,47 @@
 exports[`Toaster component matches snapshot when there is an error 1`] = `
 <DocumentFragment>
   <div
-    class="row"
-    data-testid="toaster-container"
+    id="toasty"
   >
     <div
-      class="mb-2 col-md-6"
+      class="row"
+      data-testid="toaster-container"
     >
       <div
-        aria-atomic="true"
-        aria-live="assertive"
-        class="fade toast show"
-        data-testid="toaster"
-        role="alert"
+        class="mb-2 col-md-6"
       >
         <div
-          class="toast-header"
+          aria-atomic="true"
+          aria-live="assertive"
+          class="fade toast show"
+          data-testid="toaster"
+          role="alert"
         >
-          <img
-            alt=""
-            class="rounded me-2"
-            src="holder.js/20x20?text=%20"
-          />
-          <strong
-            class="me-auto"
+          <div
+            class="toast-header"
           >
-            Error
-          </strong>
-          <button
-            aria-label="Close"
-            class="btn-close"
-            data-dismiss="toast"
-            type="button"
-          />
-        </div>
-        <div
-          class="toast-body"
-        >
-          Something went wrong
+            <img
+              alt=""
+              class="rounded me-2"
+              src="holder.js/20x20?text=%20"
+            />
+            <strong
+              class="me-auto"
+            >
+              Error
+            </strong>
+            <button
+              aria-label="Close"
+              class="btn-close"
+              data-dismiss="toast"
+              type="button"
+            />
+          </div>
+          <div
+            class="toast-body"
+          >
+            Something went wrong
+          </div>
         </div>
       </div>
     </div>
