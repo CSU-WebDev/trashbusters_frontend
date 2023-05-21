@@ -127,7 +127,7 @@ function TrashMap() {
     <>
     <div id="trashmap">
       <LoadScript
-        googleMapsApiKey="AIzaSyAUJ9Qj6tUo8_wl-ODJ3Ddm5LQPRztaguI"
+        googleMapsApiKey="AIzaSyBr0KxdGOODjVRKbgLnj0gpSawpo6NlW6U"
         onLoad={() => setApiStatus(null)}
       >
         <GoogleMap
