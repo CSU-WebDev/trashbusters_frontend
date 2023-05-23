@@ -5,8 +5,8 @@ import Toaster from './Toaster';
 import CustomSpinner from './CustomSpinner';
 
 const containerStyle = {
-  width: '750px',
-  height: '650px',
+  width: '100%',
+  height: '100%',
 };
 
 const CSU = {
@@ -127,7 +127,7 @@ function TrashMap() {
     <>
     <div id="trashmap">
       <LoadScript
-        googleMapsApiKey="AIzaSyBr0KxdGOODjVRKbgLnj0gpSawpo6NlW6U"
+        googleMapsApiKey="AIzaSyAUJ9Qj6tUo8_wl-ODJ3Ddm5LQPRztaguI"
         onLoad={() => setApiStatus(null)}
       >
         <GoogleMap
